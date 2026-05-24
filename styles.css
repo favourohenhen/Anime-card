@@ -285,10 +285,10 @@ body {
     padding: 1.5rem 0.5rem;
   }
 
-  /* Shrink card so it fits in the viewport with both buttons */
+  /* flex:1 fills space between the two buttons automatically */
   .trading-card {
-    /* 100vw minus both buttons (52px × 2) minus gaps (1.4rem × 2) minus padding */
-    width: calc(100vw - 104px - 5.6rem);
+    flex: 1;
+    min-width: 0;
     max-width: 280px;
     height: 440px;
   }
@@ -320,7 +320,8 @@ body {
   }
 
   .trading-card {
-    width: calc(100vw - 88px - 3.6rem);
+    flex: 1;
+    min-width: 0;
     max-width: 240px;
     height: 400px;
   }
