@@ -4,34 +4,112 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trading Card</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <!-- Main container  -->
     <main class="trading-body">
-      <article class="trading-card">
-        <!-- Direct container to the contents: trading card -->
-        <header class="trading-header">
-          <!-- First content container the header contents: symbol and character name -->
-          <div class="card-image1">
-            <img src="https://i.pinimg.com/736x/4f/bd/af/4fbdaf793197db467d5e8a9dbc5f179d.jpg" alt="jujusu kaisen logo" srcset="">
+      <button id="prev-btn" class="switch-btn">&lt;</button>
+
+      <article class="trading-card rarity-epic" id="character-card">
+        <div class="energy-aura"></div>
+        <div class="card-inner">
+          <!-- Front of Card -->
+          <div class="card-front">
+            <header class="trading-header">
+              <div class="card-image1">
+                <img
+                  src="https://i.pinimg.com/736x/4f/bd/af/4fbdaf793197db467d5e8a9dbc5f179d.jpg"
+                  alt="jujusu kaisen logo"
+                  id="char-logo"
+                />
+              </div>
+              <h1 class="char-name" id="char-name">Yuji Itadori</h1>
+            </header>
+
+            <section class="main-content">
+              <div class="card-image">
+                <img
+                  src="https://imgs.search.brave.com/ASogIzRHFq-vpaMWs66JTOpvm0CKa35wco3LFU0U6co/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ibG9n/Z2VyLmdvb2dsZXVz/ZXJjb250ZW50LmNv/bS9pbWcvYi9SMjl2/WjJ4bC9BVnZYc0Vo/aktaMmxoT1RfUlQ0/dkM3blc0N1dwYmVR/SGNFR3JqZDk3SmR2/VDhaYmpvNl9sOXNY/NDVLUU1wYlpqT01M/NU16QzlhMUpKZEtf/dkZVQUVJYk5IdFpp/LWdQSTlDdER3bUJZ/V1c3RU5veVY3S2lC/ZlQtbzhkd3NIY3VN/YUFfZXlRT2NYYmlt/TWxpb0lDbXdjZkVi/empVX25FaVFjZTd1/UVluckpMZ1VSSVJj/TmtjM0pXRFRnM3Bu/ZGQ3WlVRMWNRL3Mx/NjAwMC1ydy95dWpp/LWl0YWRvcmktcGZw/LTI4LnBuZw"
+                  alt="an image of Yuji itadori from jjk"
+                  id="char-img"
+                />
+              </div>
+              <div class="card-description">
+                <p id="char-desc">
+                  Vessel of Sukuna with immense physical strength.
+                </p>
+              </div>
+            </section>
           </div>
-            <h1 class="char-name">Yuji Itadori</h1>
-          
-        </header>
-        <!-- Main Content -->
-        <section class="main-content">
-            <div class="card-image">
-                <img src="https://imgs.search.brave.com/ASogIzRHFq-vpaMWs66JTOpvm0CKa35wco3LFU0U6co/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ibG9n/Z2VyLmdvb2dsZXVz/ZXJjb250ZW50LmNv/bS9pbWcvYi9SMjl2/WjJ4bC9BVnZYc0Vo/aktaMmxoT1RfUlQ0/dkM3blc0N1dwYmVR/SGNFR3JqZDk3SmR2/VDhaYmpvNl9sOXNY/NDVLUU1wYlpqT01M/NU16QzlhMUpKZEtf/dkZVQUVJYk5IdFpp/LWdQSTlDdER3bUJZ/V1c3RU5veVY3S2lC/ZlQtbzhkd3NIY3VN/YUFfZXlRT2NYYmlt/TWxpb0lDbXdjZkVi/empVX25FaVFjZTd1/UVluckpMZ1VSSVJj/TmtjM0pXRFRnM3Bu/ZGQ3WlVRMWNRL3Mx/NjAwMC1ydy95dWpp/LWl0YWRvcmktcGZw/LTI4LnBuZw" alt="an image of Yuji itadori from jjk" srcset="">
-            </div>
-        <div class="card-description">
-            <p>Vessel of Sukuna with immense physical strength.</p>
         </div>
-
-        </section>
-
       </article>
 
+      <button id="next-btn" class="switch-btn">&gt;</button>
     </main>
+
+    <script>
+      const characters = [
+        {
+          name: "Yuji Itadori",
+          logo: "https://i.pinimg.com/736x/4f/bd/af/4fbdaf793197db467d5e8a9dbc5f179d.jpg",
+          img: "https://i.pinimg.com/736x/98/14/c4/9814c4729203cb003f7daa8eb06996e2.jpg",
+          desc: "Vessel of Sukuna with immense physical strength.",
+          theme: "#ff3366",
+          rarity: "rarity-epic",
+        },
+        {
+          name: "Satoru Gojo",
+          logo: "https://i.pinimg.com/736x/4f/bd/af/4fbdaf793197db467d5e8a9dbc5f179d.jpg",
+          img: "https://i.pinimg.com/736x/63/44/95/634495b611eeb34448902e42b3fb2af4.jpg", // Different placeholder
+          desc: "The strongest jujutsu sorcerer in the world. Inheritor of the Limitless and Six Eyes.",
+          theme: "#00d4ff",
+          rarity: "rarity-legendary",
+        },
+        {
+          name: "Megumi Fushiguro",
+          logo: "https://i.pinimg.com/736x/4f/bd/af/4fbdaf793197db467d5e8a9dbc5f179d.jpg",
+          img: "https://i.pinimg.com/736x/da/da/b4/dadab4b372af04fc2a7ff70fce320a86.jpg", // Different placeholder
+          desc: "A grade 2 jujutsu sorcerer and descendant of the Zenin clan.",
+          theme: "#23a93b",
+          rarity: "rarity-rare",
+        },
+      ];
+
+      let currentIndex = 0;
+
+      function changeCharacter(direction) {
+        const card = document.getElementById("character-card");
+        const root = document.documentElement;
+
+        // Start fade out animation
+        card.classList.add("fade-out");
+
+        // Wait for half the transition time before swapping data
+        setTimeout(() => {
+          currentIndex =
+            (currentIndex + direction + characters.length) % characters.length;
+          const char = characters[currentIndex];
+
+          document.getElementById("char-name").innerText = char.name;
+          document.getElementById("char-logo").src = char.logo;
+          document.getElementById("char-img").src = char.img;
+          document.getElementById("char-desc").innerText = char.desc;
+
+          root.style.setProperty("--theme-color", char.theme);
+          card.className = `trading-card ${char.rarity}`;
+
+          // Remove fade out to trigger fade back in
+          card.classList.remove("fade-out");
+        }, 500);
+      }
+
+      document
+        .getElementById("next-btn")
+        .addEventListener("click", () => changeCharacter(1));
+      document
+        .getElementById("prev-btn")
+        .addEventListener("click", () => changeCharacter(-1));
+    </script>
   </body>
 </html>
