@@ -1,0 +1,92 @@
+:root {
+  --primary-color: blue;
+  --secondary-color: rgb(111, 111, 239);
+}
+
+.trading-body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.trading-card {
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border: 2px solid black;
+  padding: 1rem;
+  border-radius: 12px;
+}
+.trading-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 1rem;
+}
+.trading-symbol {
+  border-radius: 100%;
+  border: 2px rgb(0, 0, 0) solid;
+  padding: 22px;
+  margin: 12px;
+}
+.char-name {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+/* .body {
+  width: 30vw;
+  height: 22vh;
+  border: 2px black solid;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.desciption {
+  width: 30vw;
+  height: 22.5vh;
+  border: 2px rgb(107, 47, 145) solid;
+  margin-bottom: 10px;
+} */
+.card-image {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.card-image1{
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+
+}
+.card-image1 img{
+    width: 30%;
+  display: block;
+  object-fit: cover;
+}
+.card-image img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+.card-image img {
+  transition: transform 0.3s ease;
+}
+
+.card-image img:hover {
+  transform: scale(1.05);
+}
+/* Media Queries: Mobile reponsive */
+@media (min-width: 768px) {
+  .trading-card {
+    max-width: 450px;
+  }
+}
